@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Detector Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Detector</a>
+            <div class="nav-links-middle">
+                <a href="/text_page">Text</a> | <a href="/voice_page">Voice</a>
+            </div>
+            <div class="nav-links"><a href="/about">About Us</a></div>
+        </div>
+    </nav>
+    <div class="container">
+        {% if not result %}
+        <div class="glass-card">
+            <h1>Image Detector</h1>
+            <p class="subtitle">Upload your image below to see if it’s AI-generated or real.</p>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="image" required style="color: #94a3b8;">
+                <button type="submit" class="btn">Scan Image</button>
+            </form>
+        </div>
+        {% else %}
+        <div class="glass-card">
+            <h2 class="{{ 'fake' if 'Fake' in result else 'real' }}">{{ result }}</h2>
+            <p>Confidence: {{ confidence }}%</p>
+            <div class="bar-bg"><div class="bar-fill" style="width: {{ confidence }}%"></div></div>
+            <a href="/" class="btn secondary-btn">Back</a>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
