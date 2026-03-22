@@ -1,0 +1,125 @@
+body {
+    background: #0f172a;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6366f1;
+    text-decoration: none;
+}
+
+.nav-links-middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links-middle a, .nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.nav-links-middle a:hover, .nav-links a:hover { color: white; }
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    min-height: calc(100vh - 100px);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 24px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    font-family: inherit;
+    resize: none;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+h1 { margin-bottom: 10px; font-size: 28px; }
+.subtitle { color: #94a3b8; margin-bottom: 30px; }
+
+.btn {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.secondary-btn { 
+    background: rgba(255,255,255,0.1); width: 40%; 
+}
+.btn:hover { 
+    background: #4f46e5; transform: translateY(-2px); 
+}
+
+.fake { 
+    color: #f87171; font-size: 32px; 
+}
+.real { 
+    color: #4ade80; font-size: 32px; 
+}
+.bar-bg { 
+    background: rgba(255,255,255,0.1); height: 12px; border-radius: 10px; margin: 20px 0; 
+}
+.bar-fill { 
+    background: #6366f1; height: 100%; border-radius: 10px; transition: 1s ease-out; 
+}
+
+.small-btn {
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    width: 17%;
+}
